@@ -12,7 +12,7 @@ object SumBetween extends App{
   def sum(start:Int,end:Int): Int ={
     var sumOfNums = 0
     for (i <- start+1 until end){
-      sumOfNums += i*i
+      sumOfNums += i*i//(i^2)+((i+1)^2)+((i+2)^2)+((i+3)^2)+.......
     }
     sumOfNums
   }
