@@ -1,0 +1,71 @@
+package main.scala
+
+/**
+  * Created by Dinuka on 4/25/2017.
+  */
+object Assignment extends App{
+  def pattern(n:Int,m:Int){
+    var k:Int = (n-1)*3
+    println("  "*(k+3)+" *")
+    for(j<- 1 to n){
+      if(m==j){
+        man(k)
+      }else{
+        normal(k)
+      }
+      k-=3
+    }
+  }
+
+  def man(b:Int): Unit = {
+    for (i <- 1 to 5) {
+      if (i == 1) {
+        println("  "*b+"   0   *")
+      }
+      if (i == 2) {
+        println("  "*b+" / | \\ *")
+      }
+      if (i == 3) {
+        println("  "*b+"   |   *")
+      }
+      if (i == 4) {
+        println("  "*b+"  /  \\ *")
+      }
+      if (i == 5) {
+        println("  "*b+" *" * 4)
+      }
+    }
+  }
+
+  def normal(y:Int): Unit ={
+    for(i<- 1 to 4){
+      if(i==4){
+        println("  "*y+" *"*4)
+      }else{
+        println("  "*(y+3)+" *")
+      }
+    }
+  }
+
+  pattern(4,2)
+}
+/**
+                         *
+                         *
+                         *
+                         *
+                   * * * *
+               0   *
+             / | \ *
+               |   *
+              /  \ *
+             * * * *
+             *
+             *
+             *
+       * * * *
+       *
+       *
+       *
+ * * * *
+**/
