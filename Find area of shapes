@@ -1,0 +1,42 @@
+def areaOfShapes(): Unit ={
+  var choice:Int=0
+  var r:Int=0
+  var l:Int=0
+  var w:Int=0
+  var b:Int=0
+  var h:Int=0
+
+  var area:Float=0
+
+  println("Input 1 for to Calculate Area of Circle")
+  println("Input 2 for to Calculate Area of Rectangle")
+  println("Input 3 for to Calculate Area of Triangle")
+  print("Please Input Your Number :")
+  choice=scala.io.StdIn.readInt()
+
+  choice match {
+    case 1 =>
+      print("Input radious of circle :")
+      r=scala.io.StdIn.readInt()
+      area=(3.14*r*r).toFloat
+
+    case 2 =>
+      print("Input length of rectangle :")
+      l=scala.io.StdIn.readInt()
+      print("\nInput width of rectangle :")
+      w=scala.io.StdIn.readInt()
+      area=(l*w).toFloat
+
+    case default =>
+      print("Input base of triangle :")
+      b=scala.io.StdIn.readInt()
+      print("\nInput height of triangle :")
+      h=scala.io.StdIn.readInt()
+      area=(0.5*b*h).toFloat
+  }
+
+  println("The area is :"+area)
+
+}
+
+areaOfShapes()
