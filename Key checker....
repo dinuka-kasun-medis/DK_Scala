@@ -1,0 +1,43 @@
+object Key extends App{
+  def keyCheck(): Unit ={
+    var count:Int=0
+    var con:Boolean=true
+    while (con){
+      print("Input key : ")
+      var key1=scala.io.StdIn.readLine()
+      var num:Int=0
+      var L:Int=3
+      var ld:Int=0
+      for(i<- 0 to 11){
+        num=key1.charAt(i).toString.toInt
+        if(num%2==0){
+          L+=num/2
+        }else{
+          L+=3*num+2
+        }
+      }
+      ld=(L.toString().charAt(L.toString().length-1)).toString.toInt
+      if(ld==key1.charAt(key1.length-1).toString.toInt){
+        println("Valied Key")
+        con=false
+      }else{
+        println("Invalied Key")
+        count+=1
+      }
+      if(count==3){
+        con=false
+      }
+    }
+
+
+
+  }
+
+  keyCheck()
+
+  /**
+    * 2222222222225
+    * 1212121212121
+    * 1212121212129
+    */
+}
